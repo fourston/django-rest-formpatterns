@@ -1,0 +1,13 @@
+{% load static %}
+
+{% if form_list %}
+    <div>
+        {% for forms in form_list %}
+        <ul>
+            <li>{{forms.formName}} <br> {{forms.fields.get_field_type_display}}</li>
+        </ul>
+        {% endfor %}
+        {% else %}
+            <p>no forms</p>
+        {% endif %}
+    </div>
